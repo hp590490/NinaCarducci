@@ -137,17 +137,18 @@
         });
       }
       let index = 0,
-        next = null;
+        prev = null; //chnager next par prev
 
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i - 1; //rajouter un -1 après l'index pour passer à l'image précédente
         }
       });
-      next =
+      //changer next par prev
+      prev =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -176,7 +177,7 @@
 
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i + 1; // mettre un +1 après le i pour passer à l'index suivant
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -223,6 +224,7 @@
       }
       const buttons = document.querySelectorAll(".nav-link");
       buttons.forEach((button) => {
+        button.style.cursor = "pointer";
         button.addEventListener("click", () => {
           //à chaque clic, les boutons redeviennt normaux et le style est appliqué après sur le bouton cliqué
           buttons.forEach((btn) => {
