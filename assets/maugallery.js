@@ -1,8 +1,8 @@
-(function($) {
-  $.fn.mauGallery = function(options) {
+(function ($) {
+  $.fn.mauGallery = function (options) {
     var options = $.extend($.fn.mauGallery.defaults, options);
     var tagsCollection = [];
-    return this.each(function() {
+    return this.each(function () {
       $.fn.mauGallery.methods.createRowWrapper($(this));
       if (options.lightBox) {
         $.fn.mauGallery.methods.createLightBox(
@@ -15,7 +15,7 @@
 
       $(this)
         .children(".gallery-item")
-        .each(function(index) {
+        .each(function (index) {
           $.fn.mauGallery.methods.responsiveImageItem($(this));
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
@@ -46,10 +46,10 @@
     lightboxId: null,
     showTags: true,
     tagsPosition: "bottom",
-    navigation: true
+    navigation: true,
   };
-  $.fn.mauGallery.listeners = function(options) {
-    $(".gallery-item").on("click", function() {
+  $.fn.mauGallery.listeners = function (options) {
+    $(".gallery-item").on("click", function () {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
       } else {
@@ -67,12 +67,7 @@
   };
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
-      if (
-        !element
-          .children()
-          .first()
-          .hasClass("row")
-      ) {
+      if (!element.children().first().hasClass("row")) {
         element.append('<div class="gallery-items-row row"></div>');
       }
     },
@@ -121,7 +116,7 @@
     },
     prevImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      $("img.gallery-item").each(function () {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
@@ -129,38 +124,35 @@
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
-        $(".item-column").each(function() {
+        $(".item-column").each(function () {
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
         });
       } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
+        $(".item-column").each(function () {
+          if ($(this).children("img").data("gallery-tag") === activeTag) {
             imagesCollection.push($(this).children("img"));
           }
         });
       }
       let index = 0,
-        next = null;
+        prev = null; //chnager next par prev
 
-      $(imagesCollection).each(function(i) {
+      $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i - 1; //rajouter un -1 après l'index pour passer à l'image précédente
         }
       });
-      next =
+      //changer next par prev
+      prev =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      $("img.gallery-item").each(function () {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
@@ -168,18 +160,14 @@
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
-        $(".item-column").each(function() {
+        $(".item-column").each(function () {
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
         });
       } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
+        $(".item-column").each(function () {
+          if ($(this).children("img").data("gallery-tag") === activeTag) {
             imagesCollection.push($(this).children("img"));
           }
         });
@@ -187,9 +175,9 @@
       let index = 0,
         next = null;
 
-      $(imagesCollection).each(function(i) {
+      $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i + 1; // mettre un +1 après le i pour passer à l'index suivant
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -221,7 +209,7 @@
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
-      $.each(tags, function(index, value) {
+      $.each(tags, function (index, value) {
         tagItems += `<li class="nav-item active">
                 <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
       });
@@ -234,6 +222,18 @@
       } else {
         console.error(`Unknown tags position: ${position}`);
       }
+      const buttons = document.querySelectorAll(".nav-link");
+      buttons.forEach((button) => {
+        button.style.cursor = "pointer";
+        button.addEventListener("click", () => {
+          //à chaque clic, les boutons redeviennt normaux et le style est appliqué après sur le bouton cliqué
+          buttons.forEach((btn) => {
+            btn.style.background = "";
+            btn.style.color = "";
+          });
+          button.style.background = "#beb45a";
+        });
+      });
     },
     filterByTag() {
       if ($(this).hasClass("active-tag")) {
@@ -244,20 +244,14 @@
 
       var tag = $(this).data("images-toggle");
 
-      $(".gallery-item").each(function() {
-        $(this)
-          .parents(".item-column")
-          .hide();
+      $(".gallery-item").each(function () {
+        $(this).parents(".item-column").hide();
         if (tag === "all") {
-          $(this)
-            .parents(".item-column")
-            .show(300);
+          $(this).parents(".item-column").show(300);
         } else if ($(this).data("gallery-tag") === tag) {
-          $(this)
-            .parents(".item-column")
-            .show(300);
+          $(this).parents(".item-column").show(300);
         }
       });
-    }
+    },
   };
 })(jQuery);
