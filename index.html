@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <meta
       name="description"
       content="Nina Carducci, photographe professionnelle spécialisée dans les shootings photos (photo professionnelle, portrait, évènement type mariage ou fête...), retouches photos et album photos ."
@@ -12,13 +14,23 @@
       content="photographe, photo professionnelle, photographe entreprise, portrait professionnel, photo mariage, prix photographe professionnel, photographe évènement, mariages, événements, portraits, retouches photo, albums photo Nina Carducci"
     />
     <title>Nina Carducci - Photographe Professionnelle</title>
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/spectral/v13/rnCr-xNNw.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/gallery/caroussel1.webp"
+      as="image"
     />
   </head>
   <body>
@@ -39,6 +51,8 @@
                 ><img
                   src="assets/images/gallery/instagram.png"
                   alt="logo de la page instagram"
+                  width="20"
+                  height="20"
               /></a>
             </li>
           </ul>
@@ -77,18 +91,27 @@
               <img
                 src="./assets/images/gallery/caroussel1.webp"
                 alt="photo d'un homme travaillant en entreprise et marchant avec sa saccoche de travail"
+                width="1903"
+                height="880"
+                loading="eager"
               />
             </div>
             <div class="carousel-item">
               <img
                 src="./assets/images/gallery/caroussel2.webp"
                 alt="photo de jeunes à un concert"
+                width="1903"
+                height="880"
+                loading="lazy"
               />
             </div>
             <div class="carousel-item">
               <img
                 src="./assets/images/gallery/caroussel3.webp"
                 alt="photo de mariés le jour de leur mariage"
+                width="1903"
+                height="880"
+                loading="lazy"
               />
             </div>
           </div>
@@ -120,6 +143,8 @@
             <img
               src="./assets/images/gallery/nina.webp"
               alt="portrait de Nina, photographe professionnelle et propriétaire du site"
+              width="555"
+              height="553"
             />
           </div>
           <div id="about-me">
@@ -152,54 +177,72 @@
                 class="gallery-item"
                 src="./assets/images/gallery/gallery1.webp"
                 alt="photo de la foule lors d'un concert ou d'une fête"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Entreprises"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery2.webp"
                 alt="photo professionnelle d'un employé en entreprise"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Entreprises"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery3.webp"
                 alt="photo d'une femme souriant lors d'un rendez-vous en entreprise"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Mariages"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery4.webp"
                 alt="photo de mariage des mains des mariés "
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Portrait"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery5.webp"
                 alt="portrait d'un homme fermant les yeux devant le soleil"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Mariages"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery6.webp"
                 alt="photographie mariage des mariés souriant"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Portrait"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery7.webp"
                 alt="portrait d'une jeune femme"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Concert"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery8.webp"
                 alt="photo évènement/concert"
+                width="440"
+                height="440"
               />
               <img
                 data-gallery-tag="Entreprises"
                 class="gallery-item"
                 src="./assets/images/gallery/gallery9.webp"
                 alt="photo professionnelle d'une jeune travaillant en entreprise"
+                width="440"
+                height="440"
               />
             </div>
           </div>
@@ -311,6 +354,8 @@
             <img
               src="./assets/images/gallery/camera.webp"
               alt="photo d'une caméra professionnelle"
+              width="420"
+              height="420"
             />
           </div>
         </div>

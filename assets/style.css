@@ -33,6 +33,11 @@ nav a {
   text-decoration: none;
   color: #000;
 }
+#carousel-header img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
 .social-link img {
   width: 20px;
 }
