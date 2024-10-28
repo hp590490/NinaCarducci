@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="./assets/bootstrap/bootstrap.css"
-      media="print"
-    />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="./assets/bootstrap/bootstrap.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./assets/bootstrap/bootstrap.css"
+    /></noscript>
     <meta
       name="description"
       content="Nina Carducci, photographe professionnelle spécialisée dans les shootings photos (photo professionnelle, portrait, évènement type mariage ou fête...), retouches photos et album photos ."
@@ -18,19 +22,14 @@
       content="photographe, photo professionnelle, photographe entreprise, portrait professionnel, photo mariage, prix photographe professionnel, photographe évènement, mariages, événements, portraits, retouches photo, albums photo Nina Carducci"
     />
     <title>Nina Carducci - Photographe Professionnelle</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="./assets/fonts/inter/stylesheet.css" as="style" />
+    <link rel="stylesheet" href="./assets/fonts/inter/stylesheet.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-      rel="stylesheet"
-      defer
+      rel="preload"
+      href="./assets/fonts/spectral/stylesheet.css"
+      as="style"
     />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-        defer
-    /></noscript>
+    <link rel="stylesheet" href="./assets/fonts/spectral/stylesheet.css" />
     <link
       rel="preload"
       href="./assets/images/gallery/caroussel1.webp"
@@ -373,7 +372,7 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="./assets/maugallery.js" defer></script>
+    <script src="./assets/scripts.js" defer></script>
   </body>
 </html>
