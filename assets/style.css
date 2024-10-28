@@ -36,12 +36,13 @@ nav a {
 #carousel-item img {
   width: 100%;
   height: auto;
-  min-height: 880px;
-  max-width: 1903px;
 }
 #carouselExampleIndicators {
   min-height: 880px;
   min-width: 1903px;
+  overflow: hidden;
+  min-height: 880px;
+  max-width: 1903px;
 }
 .social-link img {
   width: 20px;
