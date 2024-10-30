@@ -6,6 +6,11 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
 }
+@font-face {
+  font-family: "Spectral";
+  src: url("./fonts/spectral/Spectral-Regular.woff2") format("woff2");
+  font-display: swap; /* Ajoutez cette ligne */
+}
 .top-header {
   background-color: #fff;
   position: sticky;
@@ -37,9 +42,10 @@ img {
   width: 100%;
   height: auto;
 }
-#carouselExampleIndicators {
+#carouselExampleIndicators img {
   width: 100%;
-  overflow: hidden;
+  height: 880px;
+  object-fit: cover;
 }
 .social-link img {
   width: 20px;
