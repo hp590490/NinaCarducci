@@ -33,16 +33,13 @@ nav a {
   text-decoration: none;
   color: #000;
 }
-#carousel-item img {
+.carousel-item img {
   width: 100%;
   height: auto;
 }
 #carouselExampleIndicators {
-  min-height: 880px;
-  min-width: 1903px;
+  width: 100%;
   overflow: hidden;
-  min-height: 880px;
-  max-width: 1903px;
 }
 .social-link img {
   width: 20px;
@@ -72,9 +69,7 @@ nav a {
 .picture img {
   width: 100%;
 }
-img {
-  width: 100%;
-}
+
 #about-me {
   flex: 2;
 }
