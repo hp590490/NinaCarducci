@@ -246,6 +246,11 @@ input[type="submit"] {
   #carouselExampleIndicators img {
     height: 40vh;
   }
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    transform: translateY(-28%);
+  }
   .picture {
     flex: 2;
   }
