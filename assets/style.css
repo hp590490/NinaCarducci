@@ -44,6 +44,7 @@ img {
 }
 #carouselExampleIndicators {
   min-height: 880px;
+  position: relative;
 }
 #carouselExampleIndicators img {
   width: 100%;
@@ -59,6 +60,7 @@ img {
   padding-inline: 100px;
   padding-block: 100px;
   position: relative;
+  min-height: 400px;
 }
 .picture.left::before {
   content: " ";
