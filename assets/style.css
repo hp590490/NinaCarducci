@@ -238,6 +238,12 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 @media all and (max-width: 1180px) {
+  #carousel-header {
+    height: 40vh;
+  }
+  #carouselExampleIndicators img {
+    height: 40vh;
+  }
   .picture {
     flex: 2;
   }
@@ -323,6 +329,9 @@ input[type="submit"] {
     flex: 1;
     padding-block: 1em;
     text-align: center;
+  }
+  .carousel-item img {
+    height: 30vh;
   }
   .picture.left::before,
   .picture.right::before {
