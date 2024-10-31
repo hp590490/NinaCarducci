@@ -45,6 +45,8 @@ img {
 #carouselExampleIndicators {
   min-height: 880px;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 #carouselExampleIndicators img {
   width: 100%;
