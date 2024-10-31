@@ -252,6 +252,14 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 @media all and (max-width: 1180px) {
+  #carousel-header {
+    height: 40vh;
+  }
+
+  #carouselExampleIndicators img {
+    height: auto;
+    max-height: 40vh;
+  }
   .picture {
     flex: 2;
   }
