@@ -247,7 +247,7 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 @media all and (max-width: 1180px) {
-  #carousel-header {
+  /* #carousel-header {
     height: 40vh;
   }
   #carouselExampleIndicators img {
@@ -257,7 +257,7 @@ input[type="submit"] {
   .carousel-control-next {
     position: absolute;
     transform: translateY(-28%);
-  }
+  } */
   .picture {
     flex: 2;
   }
