@@ -42,16 +42,16 @@ img {
   width: 100%;
   height: auto;
 }
-#carouselExampleIndicators {
-  min-height: 880px;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-#carouselExampleIndicators img {
+.carousel-inner {
   width: 100%;
   height: 880px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 .social-link img {
   width: 20px;
