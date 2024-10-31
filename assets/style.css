@@ -110,7 +110,7 @@ img {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #000000;
   background-color: #c0b341;
   border-radius: 0;
 }
