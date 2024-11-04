@@ -340,8 +340,21 @@ input[type="submit"] {
     padding-block: 1em;
     text-align: center;
   }
+  #carouselExampleIndicators,
+  .image-container {
+    min-height: 400px;
+    height: 400px;
+  }
+  #carouselExampleIndicators img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .carousel-item img {
     height: 30vh;
+  }
+  .carousel-inner img {
+    aspect-ratio: auto;
   }
   .picture.left::before,
   .picture.right::before {
