@@ -49,6 +49,8 @@ img {
   width: 100%;
   min-height: 880px;
   overflow: hidden;
+  aspect-ratio: 1903 / 880; /* Remplace par le ratio de l'image */
+  position: relative;
 }
 #carouselExampleIndicators {
   min-height: 880px;
