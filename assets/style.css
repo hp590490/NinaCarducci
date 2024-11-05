@@ -274,6 +274,7 @@ input[type="submit"] {
 @media (min-width: 1180px) {
   .image-container {
     height: 880px; /* Ajuste la hauteur pour les grands écrans (desktop) */
+    padding-top: 0;
   }
 }
 @media all and (max-width: 1179px) {
