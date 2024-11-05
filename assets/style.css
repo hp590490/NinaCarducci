@@ -273,7 +273,6 @@ input[type="submit"] {
 }
 @media (min-width: 1180px) {
   .image-container {
-    padding-top: 0; /* Conserver l'aspect ratio pour un affichage desktop optimisé */
     height: 880px; /* Ajuste la hauteur pour les grands écrans (desktop) */
   }
 }
@@ -294,7 +293,7 @@ input[type="submit"] {
     width: 100%;
   }
   .image-container {
-    height: 300px; /* Ajuste la hauteur pour les écrans moyens (tablettes, petits laptops) */
+    height: 400px; /* Ajuste la hauteur pour les écrans moyens (tablettes, petits laptops) */
   }
 }
 @media all and (max-width: 1000px) {
