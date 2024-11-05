@@ -9,7 +9,7 @@ body {
 @font-face {
   font-family: "Spectral";
   src: url("./fonts/spectral/Spectral-Regular.woff2") format("woff2");
-  font-display: swap; /* Ajoutez cette ligne */
+  font-display: swap;
 }
 .top-header {
   background-color: #fff;
