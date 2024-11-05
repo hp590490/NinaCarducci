@@ -62,7 +62,6 @@ nav a {
 
 .image-container {
   width: 100%;
-  height: 0;
   padding-top: 46.3%; /* Cette valeur est calculée à partir du ratio 1903x880, c'est-à-dire 880 / 1903 * 100 */
   position: relative;
   overflow: hidden;
@@ -274,8 +273,8 @@ input[type="submit"] {
 }
 @media (min-width: 1180px) {
   .image-container {
-    padding-top: 46.3%; /* Conserver l'aspect ratio pour un affichage desktop optimisé */
-    height: 600px; /* Ajuste la hauteur pour les grands écrans (desktop) */
+    padding-top: 0; /* Conserver l'aspect ratio pour un affichage desktop optimisé */
+    height: 880px; /* Ajuste la hauteur pour les grands écrans (desktop) */
   }
 }
 @media all and (max-width: 1179px) {
