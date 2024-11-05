@@ -42,7 +42,7 @@ nav a {
 #carouselExampleIndicators {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* S'assure que rien ne dépasse du conteneur */
 }
 
 .carousel-inner {
@@ -57,14 +57,20 @@ nav a {
   padding-top: calc(
     880 / 1903 * 100%
   ); /* Maintient le ratio pour réserver l'espace */
-  background-color: #f0f0f0; /* Empêche le fond vide avant le chargement */
+  background-color: #f0f0f0; /* Une couleur de fond pour éviter le vide */
 }
 
-#carouselExampleIndicators img,
-.carousel-inner img {
+.carousel-item {
+  position: relative; /* Permet de positionner les éléments enfants */
+}
+
+.carousel-item img {
+  position: absolute; /* Permet à l'image de remplir le conteneur */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
   display: block;
 }
 
