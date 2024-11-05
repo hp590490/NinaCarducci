@@ -48,32 +48,38 @@ nav a {
 .carousel-inner {
   width: 100%;
   position: relative;
-  display: flex; /* Permet de gérer les éléments du carrousel plus facilement */
+  display: flex;
+  flex-direction: row;
 }
 
 .carousel-item {
-  flex: 0 0 100%; /* Chaque item prend toute la largeur de l'écran */
+  flex: 0 0 100%; /* Chaque item occupe 100% de la largeur */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .image-container {
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-top: 46.3%; /* Cette valeur est calculée à partir du ratio 1903x880, c'est-à-dire 880 / 1903 * 100 */
   position: relative;
   overflow: hidden;
-  display: flex; /* Pour s'assurer que l'image occupe toute la largeur et hauteur de l'élément */
-  justify-content: center; /* Centrer l'image */
-  align-items: center; /* Centrer verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Permet à l'image de remplir l'espace sans distorsion */
+  object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .social-link img {
