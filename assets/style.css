@@ -272,6 +272,7 @@ input[type="submit"] {
   #carouselExampleIndicators img,
   .carousel-inner img {
     height: 100%; /* Remplit la hauteur fixe pour éviter les décalages */
+    width: auto;
   }
 }
 @media all and (max-width: 1180px) {
