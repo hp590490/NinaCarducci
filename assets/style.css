@@ -48,36 +48,34 @@ nav a {
 .carousel-inner {
   width: 100%;
   position: relative;
+  display: flex; /* Permet de gérer les éléments du carrousel plus facilement */
 }
 
-/* Mobile par défaut */
+.carousel-item {
+  flex: 0 0 100%; /* Chaque item prend toute la largeur de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .image-container {
   width: 100%;
-  height: auto; /* Laisser la hauteur automatique */
+  height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex; /* Pour s'assurer que l'image occupe toute la largeur et hauteur de l'élément */
+  justify-content: center; /* Centrer l'image */
+  align-items: center; /* Centrer verticalement */
 }
 
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Assure que l'image couvre bien le conteneur */
+  height: 100%;
+  object-fit: cover; /* Permet à l'image de remplir l'espace sans distorsion */
   display: block;
 }
 
-/* Pour corriger les problèmes de décalage */
-.carousel-item {
-  height: auto; /* S'assurer que chaque item s'ajuste correctement */
-}
-
-.carousel-inner {
-  display: flex; /* Utiliser flexbox pour garantir l'ajustement */
-}
-
-.carousel-item {
-  flex: 0 0 100%; /* Chaque item doit prendre 100% de la largeur */
-}
 .social-link img {
   width: 20px;
 }
@@ -268,12 +266,12 @@ input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
-@media (min-width: 768px) {
+@media (min-width: 1180px) {
   .image-container {
-    height: 880px; /* Fixer une hauteur pour les écrans plus grands */
+    height: 600px; /* Ajuste la hauteur pour les grands écrans (desktop) */
   }
 }
-@media all and (max-width: 1180px) {
+@media all and (max-width: 1179px) {
   .picture {
     flex: 2;
   }
@@ -288,6 +286,9 @@ input[type="submit"] {
   #about-me h6,
   #about-me p {
     width: 100%;
+  }
+  .image-container {
+    height: 300px; /* Ajuste la hauteur pour les écrans moyens (tablettes, petits laptops) */
   }
 }
 @media all and (max-width: 1000px) {
@@ -360,20 +361,9 @@ input[type="submit"] {
     padding-block: 1em;
     text-align: center;
   }
-  #carouselExampleIndicators,
   .image-container {
-    min-height: 400px;
-    max-height: 400px;
-    height: 400px;
-  }
-  #carouselExampleIndicators img,
-  .carousel-inner img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
-  .carousel-item img {
-    height: 100%;
+    height: 200px; /* Ajuste la hauteur pour les petits écrans */
+    aspect-ratio: unset; /* Annule le ratio sur les petits écrans */
   }
 
   .picture.left::before,
