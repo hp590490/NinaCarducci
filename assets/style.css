@@ -273,7 +273,7 @@ input[type="submit"] {
 }
 @media (min-width: 1180px) {
   .image-container {
-    height: 880px; /* Ajuste la hauteur pour les grands écrans (desktop) */
+    height: 880px;
     padding-top: 0;
   }
 }
@@ -294,7 +294,7 @@ input[type="submit"] {
     width: 100%;
   }
   .image-container {
-    height: 400px; /* Ajuste la hauteur pour les écrans moyens (tablettes, petits laptops) */
+    height: 400px;
   }
 }
 @media all and (max-width: 1000px) {
