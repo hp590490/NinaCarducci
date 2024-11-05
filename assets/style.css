@@ -46,24 +46,28 @@ nav a {
 }
 
 .carousel-inner {
-  position: relative;
   width: 100%;
-  /* La hauteur sera gérée par l'image */
+  position: relative;
 }
 
 .image-container {
   width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 1903 / 880; /* Assure le ratio sans hauteur fixe */
+  padding-top: calc(
+    880 / 1903 * 100%
+  ); /* Calcul du ratio en pourcentage pour maintenir la hauteur */
 }
 
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
-  height: auto; /* Laisse l'image déterminer la hauteur */
+  height: auto; /* Permet à l'image de remplir la largeur sans étirement */
   object-fit: cover;
   display: block;
+  position: absolute; /* S’assure que l'image s'ajuste dans le conteneur */
+  top: 0;
+  left: 0;
 }
 
 .social-link img {
