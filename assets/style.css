@@ -260,6 +260,22 @@ input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
+
+@media (min-width: 1180px) {
+  #carouselExampleIndicators {
+    height: 880px; /* Hauteur fixe uniquement pour le bureau */
+  }
+
+  .carousel-inner,
+  .image-container {
+    height: 100%; /* Prend la hauteur fixe */
+  }
+
+  #carouselExampleIndicators img,
+  .carousel-inner img {
+    height: 100%; /* Remplit la hauteur fixe pour éviter les décalages */
+  }
+}
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
