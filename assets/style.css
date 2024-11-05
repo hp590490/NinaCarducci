@@ -54,14 +54,16 @@ nav a {
   width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 1903 / 880; /* Ratio fixe pour éviter les variations */
-  background-color: #f0f0f0; /* Couleur de fond pour éviter les changements visuels avant le chargement */
+  padding-top: calc(
+    880 / 1903 * 100%
+  ); /* Maintient le ratio pour réserver l'espace */
+  background-color: #f0f0f0; /* Empêche le fond vide avant le chargement */
 }
 
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
