@@ -718,8 +718,8 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
+  /* padding-left: calc(var(--bs-gutter-x) * 0.5); */
   margin-top: var(--bs-gutter-y);
 }
 
@@ -7697,10 +7697,6 @@ fieldset:disabled .btn {
 
 .mb-3 {
   margin-bottom: 1rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem !important;
 }
 
 .mb-5 {
