@@ -55,7 +55,6 @@ nav a {
   width: 100%;
   height: auto; /* Laisser la hauteur automatique */
   position: relative;
-  aspect-ratio: 1903 / 880; /* Assurer un ratio d'aspect correct */
   overflow: hidden;
 }
 
@@ -63,11 +62,21 @@ nav a {
 .carousel-inner img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: cover; /* Assure que l'image couvre bien le conteneur */
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+}
+
+/* Pour corriger les problèmes de décalage */
+.carousel-item {
+  height: auto; /* S'assurer que chaque item s'ajuste correctement */
+}
+
+.carousel-inner {
+  display: flex; /* Utiliser flexbox pour garantir l'ajustement */
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Chaque item doit prendre 100% de la largeur */
 }
 .social-link img {
   width: 20px;
@@ -259,21 +268,9 @@ input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
-
-@media (min-width: 1181px) {
-  #carouselExampleIndicators {
-    height: 880px; /* Hauteur fixe uniquement pour le bureau */
-  }
-
-  .carousel-inner,
+@media (min-width: 768px) {
   .image-container {
-    height: 100%; /* Prend la hauteur fixe */
-  }
-
-  #carouselExampleIndicators img,
-  .carousel-inner img {
-    height: 100%; /* Remplit la hauteur fixe pour éviter les décalages */
-    width: auto;
+    height: 880px; /* Fixer une hauteur pour les écrans plus grands */
   }
 }
 @media all and (max-width: 1180px) {
@@ -291,11 +288,6 @@ input[type="submit"] {
   #about-me h6,
   #about-me p {
     width: 100%;
-  }
-  .image-container {
-    padding-top: calc(
-      440 / 1903 * 100%
-    ); /* Ajustement du ratio pour les petits écrans */
   }
 }
 @media all and (max-width: 1000px) {
