@@ -367,13 +367,24 @@ input[type="submit"] {
     padding-block: 1em;
     text-align: center;
   }
-  .image-container {
-    height: 200px; /* Ajuste la hauteur pour les petits écrans */
-    aspect-ratio: unset; /* Annule le ratio sur les petits écrans */
-    padding-top: 56.25%; /* Aspect ratio ajusté pour mobile (16:9) */
+  #carouselExampleIndicators .carousel-item {
+    height: 250px; /* Ajuste la hauteur en fonction des besoins */
+    overflow: hidden;
   }
-  #carouselExampleIndicators img {
-    object-fit: cover;
+
+  #carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Pour garder une bonne qualité d’image */
+  }
+  #carouselExampleIndicators .carousel-control-prev,
+  #carouselExampleIndicators .carousel-control-next,
+  #carouselExampleIndicators .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   .picture.left::before,
