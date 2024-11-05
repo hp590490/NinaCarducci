@@ -53,9 +53,10 @@ nav a {
 /* Mobile par défaut */
 .image-container {
   width: 100%;
-  overflow: hidden;
+  height: auto; /* Laisser la hauteur automatique */
   position: relative;
-  padding-top: calc(880 / 1903 * 100%); /* Maintient le ratio pour mobile */
+  aspect-ratio: 1903 / 880; /* Assurer un ratio d'aspect correct */
+  overflow: hidden;
 }
 
 #carouselExampleIndicators img,
