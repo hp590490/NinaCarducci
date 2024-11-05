@@ -42,7 +42,7 @@ nav a {
 #carouselExampleIndicators {
   width: 100%;
   position: relative;
-  overflow: hidden; /* S'assure que rien ne dépasse du conteneur */
+  overflow: hidden;
 }
 
 .carousel-inner {
@@ -54,23 +54,21 @@ nav a {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: calc(
-    880 / 1903 * 100%
-  ); /* Maintient le ratio pour réserver l'espace */
-  background-color: #f0f0f0; /* Une couleur de fond pour éviter le vide */
+  padding-top: calc(880 / 1903 * 100%);
+  background-color: #f0f0f0;
 }
 
 .carousel-item {
-  position: relative; /* Permet de positionner les éléments enfants */
+  position: relative;
 }
 
 .carousel-item img {
-  position: absolute; /* Permet à l'image de remplir le conteneur */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+  object-fit: cover;
   display: block;
 }
 
@@ -265,19 +263,18 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1181px) {
   #carouselExampleIndicators {
     height: 880px; /* Hauteur fixe uniquement pour le bureau */
   }
 
-  .carousel-inner,
   .image-container {
-    height: 100%; /* Prend la hauteur fixe */
+    height: 880px; /* Fixer également la hauteur ici */
   }
 
-  #carouselExampleIndicators img,
-  .carousel-inner img {
-    height: 100%; /* Remplit la hauteur fixe pour éviter les décalages */
+  .carousel-item img {
+    height: auto; /* Permet à l'image de s'ajuster en fonction de la largeur */
+    object-fit: cover; /* Assurez-vous que l'image remplit le conteneur */
   }
 }
 @media all and (max-width: 1180px) {
