@@ -39,22 +39,32 @@ nav a {
   color: #000;
 }
 
+#carouselExampleIndicators {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 100%;
+  position: relative;
+}
+
+/* Mobile par défaut */
 .image-container {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: calc(
-    880 / 1903 * 100%
-  ); /* Calcul du ratio en pourcentage pour maintenir la hauteur */
+  padding-top: calc(880 / 1903 * 100%); /* Maintient le ratio pour mobile */
 }
 
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
-  height: auto; /* Permet à l'image de remplir la largeur sans étirement */
+  height: auto;
   object-fit: cover;
   display: block;
-  position: absolute; /* S’assure que l'image s'ajuste dans le conteneur */
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -252,6 +262,16 @@ input[type="submit"] {
 @media (min-width: 1181px) {
   #carouselExampleIndicators {
     height: 880px; /* Hauteur fixe uniquement pour le bureau */
+  }
+
+  .carousel-inner,
+  .image-container {
+    height: 100%; /* Prend la hauteur fixe */
+  }
+
+  #carouselExampleIndicators img,
+  .carousel-inner img {
+    height: 100%; /* Remplit la hauteur fixe pour éviter les décalages */
   }
 }
 @media all and (max-width: 1180px) {
