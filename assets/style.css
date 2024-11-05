@@ -39,27 +39,32 @@ nav a {
   color: #000;
 }
 
+#carouselExampleIndicators {
+  min-height: 880px;
+  height: 880px; /* Fixer la hauteur pour éviter les changements de mise en page */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .carousel-inner {
   min-height: 880px;
+  height: 880px;
 }
+
 .image-container {
   width: 100%;
   min-height: 880px;
+  height: 880px; /* Fixer également la hauteur ici */
   overflow: hidden;
-  aspect-ratio: 1903 / 880; /* Remplace par le ratio de l'image */
+  aspect-ratio: 1903 / 880; /* Ratio fixe pour éviter les variations */
   position: relative;
 }
-#carouselExampleIndicators {
-  min-height: 880px;
-  height: 100vh;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+
 #carouselExampleIndicators img,
 .carousel-inner img {
   width: 100%;
-  height: 880px;
+  height: 100%; /* Assurez-vous que les images prennent la taille du conteneur */
   object-fit: cover;
   display: block;
 }
@@ -92,6 +97,7 @@ nav a {
 }
 .picture img {
   width: 100%;
+  height: auto;
 }
 
 #about-me {
