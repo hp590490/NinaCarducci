@@ -274,6 +274,7 @@ input[type="submit"] {
 }
 @media (min-width: 1180px) {
   .image-container {
+    padding-top: 46.3%; /* Conserver l'aspect ratio pour un affichage desktop optimisé */
     height: 600px; /* Ajuste la hauteur pour les grands écrans (desktop) */
   }
 }
@@ -370,6 +371,10 @@ input[type="submit"] {
   .image-container {
     height: 200px; /* Ajuste la hauteur pour les petits écrans */
     aspect-ratio: unset; /* Annule le ratio sur les petits écrans */
+    padding-top: 56.25%; /* Aspect ratio ajusté pour mobile (16:9) */
+  }
+  #carouselExampleIndicators img {
+    object-fit: cover;
   }
 
   .picture.left::before,
