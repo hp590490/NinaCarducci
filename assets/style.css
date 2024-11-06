@@ -39,48 +39,6 @@ nav a {
   color: #000;
 }
 
-#carouselExampleIndicators {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-inner {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-
-.carousel-item {
-  flex: 0 0 100%; /* Chaque item occupe 100% de la largeur */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.image-container {
-  width: 100%;
-  padding-top: 46.3%; /* Cette valeur est calculée à partir du ratio 1903x880, c'est-à-dire 880 / 1903 * 100 */
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#carouselExampleIndicators img,
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .social-link img {
   width: 20px;
 }
@@ -272,15 +230,12 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 @media (min-width: 1180px) {
-  .carousel-inner {
-    min-height: 880px; /* Hauteur fixe pour les écrans larges */
-  }
   .carousel-item {
+    width: 100%;
     position: relative;
-    width: 100%; /* Largeur pour correspondre au conteneur */
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 ou autre, selon vos images */
-    background-color: #f0f0f0; /* Placeholder pour éviter le vide */
+    padding-top: 45%; /* Ajuster ici si nécessaire */
   }
+
   .carousel-item img {
     position: absolute;
     top: 0;
@@ -289,6 +244,39 @@ input[type="submit"] {
     height: 100%;
     object-fit: cover;
   }
+}
+
+#carouselExampleIndicators {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Chaque item occupe 100% de la largeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#carouselExampleIndicators img,
+.carousel-inner img {
+  width: 100%;
+  height: auto; /* Laisse l'image s'ajuster à son conteneur */
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media all and (max-width: 1179px) {
   .picture {
