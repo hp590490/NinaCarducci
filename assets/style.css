@@ -272,10 +272,19 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 @media (min-width: 1180px) {
+  .carousel-inner {
+    min-height: 880px; /* Hauteur fixe pour les écrans larges */
+  }
   .carousel-item {
-    height: 880px; /* Ajuste cette valeur en fonction de l'esthétique */
+    position: relative;
+    width: 100%; /* Largeur pour correspondre au conteneur */
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 ou autre, selon vos images */
+    background-color: #f0f0f0; /* Placeholder pour éviter le vide */
   }
   .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
