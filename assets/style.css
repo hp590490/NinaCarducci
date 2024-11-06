@@ -275,6 +275,7 @@ input[type="submit"] {
   .carousel-item {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    min-height: 880px; /* Hauteur minimum pour stabiliser l'affichage */
   }
   .carousel-item img {
     position: absolute;
