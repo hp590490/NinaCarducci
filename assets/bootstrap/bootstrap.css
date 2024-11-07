@@ -626,7 +626,6 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
 }
 
 .img-thumbnail {
@@ -719,8 +718,8 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
+  /* padding-left: calc(var(--bs-gutter-x) * 0.5); */
   margin-top: var(--bs-gutter-y);
 }
 
@@ -4254,7 +4253,7 @@ fieldset:disabled .btn {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #000000;
 }
 
 .nav-fill > .nav-link,
@@ -7698,10 +7697,6 @@ fieldset:disabled .btn {
 
 .mb-3 {
   margin-bottom: 1rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem !important;
 }
 
 .mb-5 {
