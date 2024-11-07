@@ -17,7 +17,7 @@
     <link
       rel="preload"
       as="style"
-      href="./assets/bootstrap/bootstrap.css"
+      href="./assets/bootstrap/bootstrap.min.css"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
@@ -34,24 +34,17 @@
     <title>
       Nina Carducci - Photographe Professionnelle sur Bordeaux et Île-de-France
     </title>
-    <link
-      rel="preload"
-      href="./assets/fonts/inter/stylesheet.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
     <link rel="stylesheet" href="./assets/fonts/inter/stylesheet.css" />
     <link
       rel="preload"
       href="./assets/fonts/spectral/stylesheet.css"
       as="style"
     />
-    <link rel="stylesheet" href="./assets/fonts/spectral/stylesheet.css" />
     <link
       rel="preload"
-      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
       as="image"
+      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+      imagesizes="1920px"
     />
     <script type="application/ld+json">
       {
@@ -178,6 +171,8 @@
                 width="1921"
                 height="889"
                 title="Un homme en costume traverse la route"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <div class="carousel-item">
@@ -188,6 +183,7 @@
                 width="1921"
                 height="888"
                 title="Public lors d'un concert"
+                loading="lazy"
               />
             </div>
             <div class="carousel-item">
@@ -198,6 +194,7 @@
                 width="1921"
                 height="888"
                 title="Première danse d'un couple à leur mariage"
+                loading="lazy"
               />
             </div>
           </div>
