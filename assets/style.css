@@ -42,7 +42,7 @@ body {
 .quote-text,
 .quote-author,
 #about-me .about-me-introduction {
-  font-family: "Spectral", serif;
+  font-family: "Spectral", sans-serif;
 }
 
 .auto-size-slide,
