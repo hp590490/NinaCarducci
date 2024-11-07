@@ -1,61 +1,77 @@
+.nav-pills .nav-link,
+a:hover,
+nav a {
+  color: #000;
+}
+.service,
+.top-header {
+  background-color: #fff;
+}
+#contact,
+#services,
+.quote,
 body {
-  max-width: 1920px;
   margin: auto;
 }
-* {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+#about,
+#contact {
+  padding-inline: 100px;
+  padding-block: 100px;
+}
+.picture.left::before,
+.picture.right::before {
+  content: " ";
+  width: 374px;
+  height: 329px;
+  bottom: 0;
+  z-index: -1;
+}
+.title,
+footer {
+  text-align: center;
+}
+#about,
+footer {
+  display: flex;
+  background-color: #f6d2b8;
 }
 @font-face {
-  font-family: "Spectral";
+  font-family: Spectral;
   src: url("./fonts/spectral/Spectral-Regular.woff2") format("woff2");
   font-display: swap;
 }
-/* CSS GENERAL */
 body {
   max-width: 1920px;
-  margin: auto;
 }
-
 * {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-style: normal;
 }
-
 .quote {
   width: 70%;
-  margin: auto;
   padding-block: 3em;
 }
-
 .quote-text {
   font-style: italic;
   font-weight: 300;
   font-size: 40px;
 }
-
 .quote-author {
   font-weight: 800;
   font-size: 22px;
 }
-
-.quote-text,
+#about-me .about-me-introduction,
 .quote-author,
-#about-me .about-me-introduction {
-  font-family: "Spectral", serif;
+.quote-text {
+  font-family: Spectral, serif;
 }
-
 .auto-size-slide,
-.picture img,
-.img-fluid {
+.img-fluid,
+.picture img {
   width: 100%;
   height: auto;
 }
-
-/* CSS HEADER */
-/* .top-header */
 .top-header {
-  background-color: white;
   position: sticky;
   top: 0;
   width: 100%;
@@ -66,121 +82,82 @@ body {
   padding-block: 30px;
   align-items: center;
 }
-
+#about,
+#contact,
+#services,
+.item-column {
+  position: relative;
+}
 .top-header .name {
   font-size: 26px;
 }
-
 nav ul {
   display: flex;
   list-style-type: none;
   font-size: 14px;
   margin-bottom: 0;
 }
-
+.nav li,
 nav li {
   padding-inline: 10px;
 }
-
 nav a {
   text-decoration: none;
-  color: #000;
 }
-
-a:hover {
-  color: #000;
-}
-
-/* CSS #about */
-#about {
-  display: flex;
-  background-color: #f6d2b8;
-  padding-inline: 100px;
-  padding-block: 100px;
-  position: relative;
-}
-
 .picture.left::before {
-  content: " ";
   background-color: #e5975f;
-  width: 374px;
-  height: 329px;
   position: absolute;
-  bottom: 0;
   left: 0;
-  z-index: -1;
 }
-
 .picture {
   flex: 1;
   margin: 0 20px;
   z-index: 0;
 }
-
-#about-me {
+#about-me,
+.form-container {
   flex: 2;
 }
-
 .about-me-title {
   margin-top: 1em;
   margin-bottom: 60px;
   font-size: 30px;
 }
-
 #about-me .about-me-introduction {
   font-weight: 800;
   font-style: italic;
   width: 60%;
   font-size: 16px;
 }
-
 #about-me p {
   width: 80%;
   font-size: 14px;
 }
-
-/* CSS #gallery */
 .title {
-  text-align: center;
   padding-block: 2em;
 }
-
 .gallery .nav {
   justify-content: center;
 }
-
-.nav li {
-  padding-inline: 10px;
-}
-
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #000;
   background-color: #beb45a;
   border-radius: 0;
 }
-
-.nav-pills .nav-link {
-  color: #000;
-}
-
-.nav-pills .nav-link:hover,
-.gallery img:hover {
+.gallery img:hover,
+.nav-pills .nav-link:hover {
   cursor: pointer;
 }
-
 .item-column {
-  position: relative;
   margin-bottom: 0 !important;
   padding: 0;
 }
-
 .item-column::after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
-
 .gallery-item {
   position: absolute;
   width: 100%;
@@ -188,9 +165,8 @@ a:hover {
   object-fit: cover;
   padding: 0.5em;
 }
-
-.mg-prev,
-.mg-next {
+.mg-next,
+.mg-prev {
   width: 30px;
   height: 30px;
   border-radius: 00%;
@@ -199,14 +175,16 @@ a:hover {
   display: flex;
   font-size: 24px;
 }
-
-/* CSS #services */
-#services {
-  margin: auto;
-  background-color: #a8d5d8;
-  position: relative;
+form input,
+form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid;
+  margin-bottom: 20px;
 }
-
+#services {
+  background-color: #a8d5d8;
+}
 #services .container::before {
   content: " ";
   background-color: #1c6474;
@@ -217,15 +195,12 @@ a:hover {
   left: 0;
   z-index: 0;
 }
-
 #services .container {
   display: flex;
   justify-content: space-between;
   padding: 2em 0;
 }
-
 .service {
-  background-color: white;
   max-width: 390px;
   width: 30%;
   height: 337px;
@@ -235,81 +210,45 @@ a:hover {
   justify-content: space-between;
   z-index: 1;
 }
-
-/* CSS #contact */
 #contact {
-  margin: auto;
   background-color: #d8d3a8;
-  position: relative;
-  padding-inline: 100px;
-  padding-block: 100px;
 }
-
 #contact .container {
   display: flex;
 }
-
 .picture.right::before {
-  content: " ";
   background-color: #beb45a;
-  width: 374px;
-  height: 329px;
   position: absolute;
-  bottom: 0;
   right: 0;
-  z-index: -1;
 }
-
-.form-container {
-  flex: 2;
-}
-
 form {
   display: flex;
   flex-direction: column;
   width: 70%;
   align-items: flex-start;
 }
-
 form input {
-  width: 100%;
-  background-color: transparent;
-  border: solid 1px;
   height: 2.5em;
-  margin-bottom: 20px;
 }
-
 form textarea {
-  width: 100%;
-  background-color: transparent;
-  border: solid 1px;
   height: 5em;
   line-height: 2.5em;
   font-size: 1.2em;
-  margin-bottom: 20px;
 }
-
 input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
-
-/* CSS FOOTER */
 footer {
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 20px;
-  text-align: center;
-  background-color: #f6d2b8;
 }
-
 footer li {
   list-style: none;
 }
-
 @media screen and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -327,30 +266,31 @@ footer li {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 1000px) {
-  #about {
+  .picture.left::before,
+  .picture.right::before {
+    height: 30%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+  }
+  #about,
+  #contact .container,
+  #services .container {
     flex-direction: column;
   }
   .picture {
     width: 50%;
   }
   .picture.left::before {
-    width: 100%;
-    height: 30%;
-    position: absolute;
     bottom: auto;
     top: 0;
     left: 0;
-    z-index: -1;
   }
   .about-me-title,
   h1 {
     text-align: center;
     margin-top: 1em;
-  }
-  #services .container {
-    flex-direction: column;
   }
   .service {
     width: 100%;
@@ -361,7 +301,6 @@ footer li {
   .service-description {
     margin-bottom: 1em;
   }
-
   #services .container::before {
     width: 30%;
     height: 100%;
@@ -370,23 +309,14 @@ footer li {
     left: auto;
     z-index: 0;
   }
-
-  #contact .container {
-    flex-direction: column;
-  }
   #contact .picture.right {
     margin-top: 1em;
   }
   .picture.right::before {
-    width: 100%;
-    height: 30%;
-    position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
   }
 }
-
 @media screen and (max-width: 650px) {
   .top-header {
     flex-direction: column;
@@ -395,7 +325,7 @@ footer li {
   .top-header nav,
   .top-header nav ul {
     width: 100%;
-    padding: 0 0 0 0;
+    padding: 0;
   }
   .top-header nav li {
     flex: 1;
