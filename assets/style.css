@@ -11,7 +11,7 @@ body {
   src: url("./fonts/spectral/Spectral-Regular.woff2") format("woff2");
   font-display: swap;
 }
-/* CSS GENERAL */
+
 body {
   max-width: 1920px;
   margin: auto;
@@ -52,8 +52,6 @@ body {
   height: auto;
 }
 
-/* CSS HEADER */
-/* .top-header */
 .top-header {
   background-color: white;
   position: sticky;
@@ -94,8 +92,8 @@ a:hover {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 46.25%; /* Ratio d'aspect de l'image (889px / 1921px) */
-  overflow: hidden; /* Empêche que les images ne dépassent du conteneur */
+  padding-bottom: 46.25%;
+  overflow: hidden;
 }
 
 .carousel-inner img {
@@ -103,17 +101,16 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  object-fit: cover; /* Cela permet à l'image de remplir le conteneur sans déformation */
+  object-fit: cover;
   z-index: 1;
 }
 
 .carousel-item {
   width: 100%;
-  height: 100%; /* Permet à l'élément de s'ajuster à la hauteur de l'image */
+  height: 100%;
   position: relative;
 }
 
-/* CSS #about */
 #about {
   display: flex;
   background-color: #f6d2b8;
@@ -161,7 +158,6 @@ a:hover {
   font-size: 14px;
 }
 
-/* CSS #gallery */
 .title {
   text-align: center;
   padding-block: 2em;
@@ -222,7 +218,6 @@ a:hover {
   font-size: 24px;
 }
 
-/* CSS #services */
 #services {
   margin: auto;
   background-color: #a8d5d8;
@@ -258,7 +253,6 @@ a:hover {
   z-index: 1;
 }
 
-/* CSS #contact */
 #contact {
   margin: auto;
   background-color: #d8d3a8;
@@ -314,22 +308,6 @@ form textarea {
 input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
-}
-
-/* CSS FOOTER */
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-  text-align: center;
-  background-color: #f6d2b8;
-}
-
-footer li {
-  list-style: none;
 }
 
 @media screen and (max-width: 1180px) {
@@ -444,10 +422,5 @@ footer li {
   }
   .picture {
     width: 80%;
-  }
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
   }
 }
