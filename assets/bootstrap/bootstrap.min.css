@@ -6289,6 +6289,7 @@ fieldset:disabled .btn {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+  color: black;
 }
 .stretched-link::after {
   position: absolute;
