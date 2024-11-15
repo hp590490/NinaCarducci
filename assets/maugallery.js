@@ -215,14 +215,19 @@
         console.error(`Unknown tags position: ${position}`);
       }
       const buttons = document.querySelectorAll(".nav-link");
+      let activeButton = null;
+
       buttons.forEach((button) => {
         button.style.cursor = "pointer";
         button.addEventListener("click", () => {
-          buttons.forEach((btn) => {
-            btn.style.background = "";
-            btn.style.color = "";
-          });
+          // Réinitialiser le bouton actif précédent
+          if (activeButton) {
+            activeButton.style.background = "";
+            activeButton.style.color = "";
+          }
+          // Appliquer les styles au bouton cliqué
           button.style.background = "#beb45a";
+          activeButton = button; // Mettre à jour le bouton actif
         });
       });
     },
