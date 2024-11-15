@@ -220,14 +220,12 @@
       buttons.forEach((button) => {
         button.style.cursor = "pointer";
         button.addEventListener("click", () => {
-          // Réinitialiser le bouton actif précédent
           if (activeButton) {
             activeButton.style.background = "";
             activeButton.style.color = "";
           }
-          // Appliquer les styles au bouton cliqué
           button.style.background = "#beb45a";
-          activeButton = button; // Mettre à jour le bouton actif
+          activeButton = button;
         });
       });
     },
